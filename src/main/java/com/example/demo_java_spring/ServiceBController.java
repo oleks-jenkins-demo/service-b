@@ -25,7 +25,7 @@ public class ServiceBController {
                 .bodyToMono(Response.class)
                 .map(response -> {
                     String message = response.getMessage();
-                    String concatenatedMessage = "b " + " <- " + message;
+                    String concatenatedMessage = "b (personal) " + " <- " + message;
                     Response newResponse = new Response(concatenatedMessage);
                     return ResponseEntity.ok(newResponse);
                 });
